@@ -8,7 +8,6 @@ spec:
   issuerRef:
     # PRODUCTION - Trusted SSL certificates (limited to 5 certs/week)
     name: letsencrypt-prod
-    # For testing (unlimited requests), use: letsencrypt-staging
     kind: ClusterIssuer
   dnsNames:
-    - shop.emchrismobility.com
+    - admin.emchrismobility.com
