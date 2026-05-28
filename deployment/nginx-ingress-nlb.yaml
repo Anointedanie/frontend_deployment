@@ -135,15 +135,15 @@ rules:
     resources:
       - ingressclasses
     verbs:
-      - get
-      - list
-      - watch
+        - get
+        - list
+        - watch
   - apiGroups:
       - coordination.k8s.io
     resources:
       - leases
     resourceNames:
-      - ingress-nginx-leader
+      - ingress-controller-leader   # FIXED: was "ingress-nginx-leader", controller uses this name
     verbs:
       - get
       - update
@@ -152,7 +152,7 @@ rules:
     resources:
       - leases
     verbs:
-      - create
+      - create                      # create cannot have resourceNames restriction
   - apiGroups:
       - ""
     resources:
@@ -308,5 +308,7 @@ apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
   name: nginx
+  annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
 spec:
   controller: k8s.io/ingress-nginx

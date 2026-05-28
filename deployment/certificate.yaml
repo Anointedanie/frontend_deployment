@@ -4,7 +4,7 @@ metadata:
   name: frontend-tls-cert
   namespace: ecommerce-frontend-ns
 spec:
-  secretName: ecommerce-frontend-tls-secret
+  secretName: frontend-tls-secret
   issuerRef:
     # PRODUCTION - Trusted SSL certificates (limited to 5 certs/week)
     name: letsencrypt-prod
