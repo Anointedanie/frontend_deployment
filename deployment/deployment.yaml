@@ -26,7 +26,7 @@ spec:
       containers:
       - name: ecommerce-frontend
         # IMPORTANT: Replace with your ECR repository URI
-        image: 180162571952.dkr.ecr.us-east-1.amazonaws.com/ecr-test-repo/frontend:dev-6
+        image: 180162571952.dkr.ecr.us-east-1.amazonaws.com/ecr-test-repo/frontend:dev-7
         imagePullPolicy: Always  # Always pull latest image
         ports:
         - name: http
