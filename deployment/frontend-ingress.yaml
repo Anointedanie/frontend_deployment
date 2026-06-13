@@ -4,7 +4,6 @@ metadata:
   name: ecommerce-frontend-ingress
   namespace: ecommerce-frontend-ns
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
@@ -12,10 +11,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - admin.emchrismobility.com
+        - login.emchrismobility.com
       secretName: frontend-tls-secret
   rules:
-    - host: admin.emchrismobility.com
+    - host: login.emchrismobility.com
       http:
         paths:
           - path: /

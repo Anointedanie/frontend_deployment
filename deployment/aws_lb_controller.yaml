@@ -578,7 +578,7 @@ spec:
     spec:
       containers:
       - args:
-        - --cluster-name=trust-eks
+        - --cluster-name=shopify-eks-new
         - --ingress-class=alb
         - --aws-region=us-east-1
         - --aws-vpc-id=vpc-023e7d07f98d71a4a

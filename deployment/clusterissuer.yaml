@@ -9,7 +9,7 @@ spec:
     # PRODUCTION server (trusted certificates)
     server: https://acme-v02.api.letsencrypt.org/directory
     # For testing (unlimited), use: https://acme-staging-v02.api.letsencrypt.org/directory
-    email: chriscrsov@gmail.com
+    email: anointedanie@gmail.com
     privateKeySecretRef:
       name: letsencrypt-prod
       # For testing, use: letsencrypt-staging
