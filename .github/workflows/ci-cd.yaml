@@ -23,7 +23,7 @@ jobs:
       - name: Setup prerequisites (auto-installs everything)
         run: |
           cd automation_script
-          sudo ./check_prerequisites.py
+          ./check_prerequisites.py
 
       - name: Deploy to EKS
         run: |

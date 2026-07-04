@@ -1,0 +1,2 @@
+# Ignore secret files with actual values
+error_files/
